@@ -53,15 +53,25 @@
       opacity: 0;
       visibility: hidden;
       transition: all linear .2s;
+      border-top: 1px solid var(--color-blue);
+      flex-wrap: nowrap;
       &.is-open {
         opacity: 1;
         visibility: visible;
       }
     }
+    @include large-mobile {
+      height: calc(100vh - 5.6rem);
+      top: 100%;
+      overflow-y: auto;
+    }
   }
   &__menu {
     @include large-tablet {
       width: 100%;
+    }
+    @include large-mobile {
+      margin-bottom: auto;
     }
   }
   &__logo {

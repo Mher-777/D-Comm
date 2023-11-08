@@ -53,17 +53,39 @@ li, ol {
 
 .h2,
 .content h2 {
-	@include line-height(44, 53)
+	@include line-height(44, 53);
+	@include large-desktop {
+		@include line-height(40, 50);
+	}
+	@include large-tablet {
+		@include line-height(30, 36);
+	}
+	@include large-mobile {
+		@include line-height(20, 24);
+	}
 }
 
 .h3,
 .content h3 {
-	@include line-height(26, 31)
+	@include line-height(26, 31);
+	@include large-tablet {
+		@include line-height(20, 25);
+	}
+	@include large-mobile {
+		@include line-height(16, 20);
+	}
 }
 
 .h4,
 .content h4 {
-	@include line-height(20, 26)
+	font-weight: 500;
+	@include line-height(20, 26);
+	@include large-tablet {
+		@include line-height(16, 20);
+	}
+	@include large-mobile {
+		@include line-height(13, 17);
+	}
 }
 
 .h5,

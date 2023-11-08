@@ -9,9 +9,9 @@ var config = {
 
 	body: $('body'),
 
-	header: $('header'),
+	html: $('html'),
 
-	container: $('html, body'),
+	header: $('header'),
 
 	getRandomInt: (min, max) => {
 		return Math.floor(Math.random() * (max - min + 1)) + min;

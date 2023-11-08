@@ -11,6 +11,7 @@ var menu = {
         if ($(window).width() > 992) {
             $(menu.hamburger).removeClass('is-active')
             $(menu.nav).removeClass('is-open')
+            $(config.html).removeClass('js-lock')
         }
 
         $(menu.hamburger).on('click', function (e) {
@@ -20,7 +21,7 @@ var menu = {
                 const $this = $(this)
 
                 $this.toggleClass('is-active')
-
+                $(config.html).toggleClass('js-lock')
                 $(menu.nav).toggleClass('is-open')
             }, 25);
 
@@ -71,15 +72,15 @@ var menu = {
         if (window.scrollY > HEADER_TOP_HEIGHT) {
 
             const style = {
-                'margin-top': `${-HEADER_TOP_HEIGHT}px`,
+                'margin-top': `${-HEADER_TOP_HEIGHT - 20}px`,
             };
 
             if (!ScrollDown) {
                 style['margin-top'] = 0;
             }
             setTimeout(function () {
-                $header.css(style)
                 $header.addClass('is-sticky')
+                $header.css(style)
             }, 100)
 
         } else {

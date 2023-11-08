@@ -197,3 +197,29 @@ svg {
 	width: 100%;
 	height: 100%;
 }
+
+.section-title {
+	background: linear-gradient(90deg, #FFF 0%, rgba(255, 255, 255, 0.00) 94.59%);
+	display: block;
+	max-width: fit-content;
+	padding: .7rem 0 .7rem 1.5rem;
+	border-left: .6rem solid var(--color-blue-light);
+	color: var(--color-blue-light);
+	margin-bottom: 3rem;
+	font-weight: 500;
+	@include line-height(20, 26);
+	@include large-mobile {
+		@include line-height(12, 15);
+		margin-bottom: 1rem;
+	}
+}
+
+section {
+	margin-top: 10rem;
+	@include large-tablet {
+		margin-top: 5rem;
+	}
+	@include large-mobile {
+		margin-top: 3rem;
+	}
+}
