@@ -1,0 +1,71 @@
+.content p,
+.p,
+.content li,
+.li {
+	@include line-height(16, 19);
+}
+
+li, ol {
+	list-style: none;
+}
+
+.content ul,
+.content ol {
+	list-style: none;
+}
+
+.content b,
+.b {
+	font-weight: bold;
+}
+
+.content strong,
+.strong {
+	font-weight: 500;
+}
+
+.content a,
+.a {
+}
+
+.h1,
+.content h1,
+.h2,
+.content h2,
+.h3,
+.content h3,
+.h4,
+.content h4,
+.h5,
+.content h5,
+.h6,
+.content h6 {
+}
+
+.h1,
+.content h1 {
+	@include line-height(58, 58)
+}
+
+.h2,
+.content h2 {
+	@include line-height(44, 53)
+}
+
+.h3,
+.content h3 {
+	@include line-height(26, 31)
+}
+
+.h4,
+.content h4 {
+	@include line-height(20, 26)
+}
+
+.h5,
+.content h5 {
+}
+
+.h6,
+.content h6 {
+}

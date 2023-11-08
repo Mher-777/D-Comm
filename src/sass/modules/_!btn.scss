@@ -1,0 +1,76 @@
+.btn {
+  font-size: 1.6rem;
+  background-color: var(--color-blue);
+  color: var(--color-white);
+  border: none;
+  min-width: 26rem;
+  padding: 1rem 2rem;
+  transition: var(--transition);
+  overflow: hidden;
+  position: relative;
+  font-weight: 600;
+  cursor: pointer;
+  min-height: 4.5rem;
+  text-align: center;
+  &__back {
+    position: absolute;
+    left: -0.3rem;
+    top: -0.3rem;
+    right: -0.3rem;
+    bottom: -0.3rem;
+    border-radius: inherit;
+    overflow: hidden;
+    -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
+  }
+  &:hover {
+  }
+  &__text {
+    position: relative;
+    z-index: 4;
+  }
+
+  &__arrow {
+    width: 1.7rem;
+    height: 1.7rem;
+    margin-left: 1.5rem;
+    fill: currentColor;
+    position: relative;
+    z-index: 3;
+    @include large-mobile {
+      width: 1.1rem;
+      height: 1.1rem;
+      margin-left: 0.5rem;
+    }
+  }
+
+  &_blue {
+    background-color: #3252ec;
+    .b-circle {
+      border: 0.4rem solid darken(#3252ec, 5%);
+      background-color: darken(#3252ec, 5%);
+    }
+  }
+
+  &_light {
+    background: #f2f7ff;
+    color: var(--color-blue-40);
+    .b-circle {
+      border: 0.4rem solid darken(#f2f7ff, 5%);
+      background-color: darken(#f2f7ff, 5%);
+    }
+  }
+
+  &.btn_border {
+    background-color: transparent;
+    border: 1px solid #b9c1e9;
+    border-radius: 1.2rem;
+    color: var(--color-blue-70);
+  }
+
+  @include large-mobile {
+    font-size: 1.4rem;
+    min-width: 17rem;
+    min-height: 5rem;
+    padding: 1rem 2rem;
+  }
+}

@@ -1,0 +1,15 @@
+.header {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  &__inner {
+    min-height: 10rem;
+    background-color: var(--color-mystic);
+    padding: 2.5rem 0;
+  }
+  &__logo {
+    margin-right: 5rem;
+  }
+}

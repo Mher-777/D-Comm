@@ -1,0 +1,187 @@
+@use 'sass:math';
+* {
+	padding: 0;
+	margin: 0;
+	outline: none;
+	box-sizing: border-box;
+}
+
+.container {
+	padding: 0 2rem;
+	max-width: 158rem;
+	margin: 0 auto;
+	position: relative;
+	&_fluid {
+		max-width: 100%;
+	}
+	@include large-tablet {
+
+	}
+}
+
+html {
+	font-size: 100vw / (1920/10); // 1rem = 10px
+	&.js-lock {
+		overflow: hidden;
+	}
+
+	@include mackbook {
+		font-size: 100vw / (1700/10);
+	}
+
+	@include small-desktop {
+		font-size: 100vw / (1440/10);
+	}
+
+	@include large-tablet {
+		font-size: 100vw / (992/10);
+	}
+
+	@include large-mobile {
+		font-size: 100vw / (375/10);
+	}
+}
+
+body {
+	position: relative;
+	font-size: 2rem;
+	background-color: var(--color-mystic);
+	font-family: var(--font-base);
+	&.js-lock {
+		overflow-x: hidden;
+		overflow-y: scroll;
+	}
+}
+
+input,
+textarea,
+button {
+	-webkit-appearance: none;
+	appearance: none;
+	-moz-appearance: none;
+	color: inherit;
+	font-family: inherit;
+}
+
+main {
+	display: block;
+}
+
+a {
+	color: inherit;
+	text-decoration-skip-ink: none;
+	text-decoration: none;
+}
+
+.inline {
+	font-size: 0;
+
+	& > * {
+		display: inline-block;
+		vertical-align: middle;
+	}
+}
+
+.icon {
+	width: 100%;
+}
+
+.clear {
+	&:after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+	&__left {
+		float: left;
+	}
+	&__right {
+		float: right;
+	}
+}
+
+.flex {
+	display: flex;
+	flex-wrap: wrap;
+
+	&_center {
+		justify-content: center;
+	}
+
+	&_inline {
+		display: inline-flex;
+	}
+
+	&_justify {
+		justify-content: space-between;
+	}
+
+	&_left {
+		justify-content: flex-start;
+	}
+
+	&_right {
+		justify-content: flex-end;
+	}
+
+	&_start {
+		align-items: flex-start;
+	}
+	&_bottom {
+		align-items: flex-end;
+	}
+
+	&_vertical {
+		align-items: center;
+	}
+}
+
+.css-text-left {
+	text-align: left;
+}
+
+.css-text-center {
+	text-align: center;
+}
+
+.css-text-right {
+	text-align: right;
+}
+
+img,
+svg {
+	vertical-align: top;
+	max-width: 100%;
+}
+
+.object-fit {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.css-scrollbar {
+	overflow-y: auto;
+	/* width */
+	&::-webkit-scrollbar {
+		width: 3px;
+	}
+
+	/* Track */
+	&::-webkit-scrollbar-track {
+		background: rgba(#c4c4c4, 0.4);
+	}
+
+	/* Handle */
+	&::-webkit-scrollbar-thumb {
+		background: gray;
+	}
+
+	/* Handle on hover */
+	// &::-webkit-scrollbar-thumb:hover {
+	// 	background: #555;
+	// }
+}

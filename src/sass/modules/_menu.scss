@@ -1,0 +1,45 @@
+.menu {
+  font-size: 1.6rem;
+  &__link {
+    display: inline-flex;
+    align-items: center;
+  }
+  &__item {
+    position: relative;
+    font-weight: 500;
+    &:not(:last-child) {
+      margin-right: 4rem;
+    }
+    .icon {
+      width: 1.4rem;
+      height: 1.4rem;
+      vertical-align: baseline;
+      margin-left: .5rem;
+      flex-shrink: 0;
+      fill: currentColor;
+    }
+    &:hover {
+      .menu {
+        &__link {
+          color: var(--color-governor-bay);
+        }
+        &__dropdown {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+  }
+  &__dropdown {
+    top: calc(100% + 4rem);
+    left: -3rem;
+    &:before {
+      content: '';
+      position: absolute;
+      top: -4rem;
+      height: 4rem;
+      left: -3rem;
+      width: 100%;
+    }
+  }
+}

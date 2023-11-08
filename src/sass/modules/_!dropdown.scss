@@ -1,0 +1,27 @@
+.dropdown {
+  position: absolute;
+  min-width: 35.5rem;
+  padding: 2.5rem 3rem;
+  background-color: var(--color-mystic);
+  border: 1px solid var(--color-blue);
+  transition: var(--transition);
+  opacity: 0;
+  visibility: hidden;
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 1.5rem;
+    }
+  }
+  &__link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .icon {
+      transform: rotate(-90deg);
+    }
+    &:hover {
+      color: var(--color-governor-bay);
+      font-weight: 500;
+    }
+  }
+}
