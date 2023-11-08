@@ -44,7 +44,11 @@ li, ol {
 
 .h1,
 .content h1 {
-	@include line-height(58, 58)
+	@include line-height(58, 58);
+	font-weight: 600;
+	@include large-mobile {
+		@include line-height(28, 28);
+	}
 }
 
 .h2,

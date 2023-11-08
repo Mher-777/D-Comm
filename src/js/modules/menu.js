@@ -1,15 +1,66 @@
 import { config } from "../config";
 
 var menu = {
+    item: ".js-item",
+    dropdown: ".js-dropdown",
+    hamburger: '.js-hamburger',
+    resizeTimer: '',
+    nav: '.header__nav',
+
+    menuOpen: () => {
+        if ($(window).width() > 992) {
+            $(menu.hamburger).removeClass('is-active')
+            $(menu.nav).removeClass('is-open')
+        }
+
+        $(menu.hamburger).on('click', function (e) {
+            clearTimeout(menu.resizeTimer);
+            menu.resizeTimer = setTimeout(() => {
+                e.preventDefault()
+                const $this = $(this)
+
+                $this.toggleClass('is-active')
+
+                $(menu.nav).toggleClass('is-open')
+            }, 25);
+
+        })
+    },
+
+    dropDown: () => {
+        if ($(window).width() > 992) return false
+        $('.js-dropdown').on('click', function (e) {
+            const $this = $(this)
+
+            if ($(window).width() <= 992) {
+                e.preventDefault()
+                clearTimeout(menu.resizeTimer);
+                menu.resizeTimer = setTimeout(() => {
+                    if (!$this.hasClass('is-active')) {
+                        $('.menu .dropdown').slideUp()
+                        $('.js-dropdown').removeClass('is-active')
+                    }
+
+                    if ($(e.target).hasClass('menu__link')) {
+                        $this.find('.dropdown').slideToggle()
+                        $this.toggleClass('is-active')
+                    }
+                }, 25);
+
+            }
+
+        })
+    },
+
     OldScrollPosition: 0,
 
     scrollState: () => {
         const $header = $('.header');
 
-        if ($(window).width() > 580) {
-            $header.removeAttr('style')
-            return false
-        }
+        // if ($(window).width() > 580) {
+        //     $header.removeAttr('style')
+        //     return false
+        // }
 
         const ScrollDown = menu.OldScrollPosition < window.scrollY;
 
@@ -28,6 +79,7 @@ var menu = {
             }
             setTimeout(function () {
                 $header.css(style)
+                $header.addClass('is-sticky')
             }, 100)
 
         } else {
@@ -37,10 +89,13 @@ var menu = {
                     $header.css({
                         'margin-top': 0,
                     })
+
+                    $header.removeClass('is-sticky')
                 }, 100)
             } else {
                 setTimeout(function () {
                     $header.removeAttr('style')
+                    $header.removeClass('is-sticky')
                 }, 100)
             }
         }
@@ -49,6 +104,11 @@ var menu = {
     init: () => {
         config.addListenerMulti(window, 'scroll load', function () {
             menu.scrollState()
+        })
+
+        config.addListenerMulti(window, 'resize load', function () {
+            menu.dropDown()
+            menu.menuOpen()
         })
 
     }

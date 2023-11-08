@@ -34,7 +34,7 @@ $small_mobile: 440px;
 }
 
 @mixin large-tablet() {
-  @media only screen and (max-width: 1000px) {
+  @media only screen and (max-width: 992px) {
     @content;
   }
 }
@@ -83,7 +83,7 @@ $small_mobile: 440px;
 }
 
 @mixin min-large-tablet() {
-  @media only screen and (min-width: 1120px) {
+  @media only screen and (min-width: 993px) {
     @content;
   }
 }

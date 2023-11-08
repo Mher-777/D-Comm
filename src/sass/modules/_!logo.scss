@@ -4,5 +4,8 @@
   }
   &__image {
     width: 16.5rem;
+    @include large-mobile {
+      width: 14rem;
+    }
   }
 }

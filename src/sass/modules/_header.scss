@@ -4,12 +4,77 @@
   top: 0;
   left: 0;
   width: 100%;
+  background-color: var(--color-mystic);
+  transition: var(--transition);
+  @include large-tablet {
+    border-bottom: 1px solid var(--color-blue);
+  }
+  &.is-sticky {
+    .header {
+      &__inner {
+        padding: 1.5rem 0;
+      }
+    }
+    .menu__dropdown {
+      top: calc(100% + 2.7rem);
+      &::before {
+        height: 2.7rem;
+        top: -2.7rem;
+      }
+    }
+  }
   &__inner {
-    min-height: 10rem;
-    background-color: var(--color-mystic);
-    padding: 2.5rem 0;
+    padding: 2.7rem 0;
+    transition: var(--transition);
+    @include large-mobile {
+      padding: 1rem 0;
+    }
+  }
+  &__btn {
+    @include large-desktop {
+      min-width: 2.4rem;
+    }
+    @include large-tablet {
+      width: 100%;
+      margin-bottom: 1.5rem;
+    }
+  }
+  &__nav {
+    flex: 1 1 auto;
+    @include large-tablet {
+      position: absolute;
+      top: calc(100% + 1px);
+      background-color: var(--color-mystic);
+      width: 100%;
+      left: 0;
+      padding: 1.5rem 2rem 2rem;
+      flex-direction: column-reverse;
+      align-items: flex-start;
+      opacity: 0;
+      visibility: hidden;
+      transition: all linear .2s;
+      &.is-open {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+  &__menu {
+    @include large-tablet {
+      width: 100%;
+    }
   }
   &__logo {
     margin-right: 5rem;
+    @include large-desktop {
+      margin-right: 2rem;
+    }
+  }
+
+  &__socials {
+    @include large-tablet {
+      order: -1;
+      margin-top: 4rem;
+    }
   }
 }

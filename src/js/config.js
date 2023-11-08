@@ -7,6 +7,10 @@ var config = {
 
 	transitionEnd: "transitionend webkitTransitionEnd oTransitionEnd",
 
+	body: $('body'),
+
+	header: $('header'),
+
 	container: $('html, body'),
 
 	getRandomInt: (min, max) => {

@@ -1,14 +1,45 @@
 .menu {
   font-size: 1.6rem;
+  @include large-mobile {
+    font-size: 1.3rem;
+  }
+  &__list {
+    @include large-tablet {
+      display: block;
+    }
+  }
   &__link {
     display: inline-flex;
     align-items: center;
+    @include large-tablet {
+      display: flex;
+      justify-content: space-between;
+    }
   }
   &__item {
     position: relative;
     font-weight: 500;
     &:not(:last-child) {
       margin-right: 4rem;
+      @include large-desktop {
+        margin-right: 3rem;
+      }
+      @include large-tablet {
+        margin-right: 0;
+        margin-bottom: 2rem;
+        width: 100%;
+        &.is-active {
+          .icon {
+            transform: rotate(180deg);
+          }
+          .menu__link {
+            color: var(--color-governor-bay);
+          }
+        }
+      }
+    }
+    @include large-tablet {
+      font-weight: 400;
     }
     .icon {
       width: 1.4rem;
@@ -17,11 +48,22 @@
       margin-left: .5rem;
       flex-shrink: 0;
       fill: currentColor;
+      @include large-tablet {
+        width: 2rem;
+        height: 2rem;
+        pointer-events: none;
+        transition: var(--transition);
+      }
+      @include large-mobile {
+        width: 1.5rem;
+        height: 1.5rem;
+      }
     }
     &:hover {
       .menu {
         &__link {
           color: var(--color-governor-bay);
+
         }
         &__dropdown {
           opacity: 1;
@@ -40,6 +82,9 @@
       height: 4rem;
       left: -3rem;
       width: 100%;
+      @include large-tablet {
+        display: none;
+      }
     }
   }
 }

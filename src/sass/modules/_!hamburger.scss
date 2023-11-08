@@ -1,0 +1,41 @@
+.hamburger {
+  border: none;
+  width: 3.5rem;
+  height: 3.5rem;
+  padding: .5rem;
+  position: relative;
+  background-color: transparent;
+  display: none;
+  @include large-tablet {
+    display: block;
+  }
+  @include large-mobile {
+    width: 3rem;
+    height: 3rem;
+  }
+  .icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    transition: var(--transition);
+    &-hamburgerOpen {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+  &.is-active {
+    .icon {
+      &-hamburgerOpen {
+        opacity: 1;
+        visibility: visible;
+      }
+      &-hamburgerClose {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+  }
+}
