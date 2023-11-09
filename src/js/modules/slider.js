@@ -1,11 +1,12 @@
-import Swiper, { Navigation, Pagination, EffectFade, FreeMode, Autoplay } from 'swiper';
-Swiper.use([Navigation, Pagination, EffectFade, FreeMode, Autoplay]);
+import Swiper from 'swiper';
+import { FreeMode, Autoplay, Mousewheel } from 'swiper/modules';
 
 var sliders = {
     selector: ".js-slider",
 
     settings: {
         loop: true,
+        modules: [],
         pagination: {
             clickable: true
         },
@@ -21,7 +22,12 @@ var sliders = {
         let clone = JSON.parse(JSON.stringify(sliders.settings));
 
         let current = Object.assign(clone, data);
-        new Swiper($(selector)[0], current)
+        new Swiper($(selector)[0], {
+            modules: [FreeMode, Autoplay, Mousewheel],
+            mousewheel: true,
+            freeMode: true,
+            slidesPerView: "auto",
+        })
 
         selector.addEventListener('touchstart', () => false, { passive: false })
 

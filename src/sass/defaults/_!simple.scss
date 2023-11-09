@@ -44,7 +44,7 @@ html {
 
 body {
 	position: relative;
-	font-size: 2rem;
+	@include line-height(20, 26);
 	background-color: var(--color-mystic);
 	font-family: var(--font-base);
 	&.js-lock {
@@ -54,7 +54,9 @@ body {
 	&.resize-animation-stopper * {
 		transition: none !important;
 	}
-
+	@include large-mobile {
+		@include line-height(13, 17);
+	}
 }
 
 input,

@@ -54,6 +54,10 @@ li, ol {
 .h2,
 .content h2 {
 	@include line-height(44, 53);
+	font-weight: 600;
+	span {
+		color: var(--color-blue);
+	}
 	@include large-desktop {
 		@include line-height(40, 50);
 	}

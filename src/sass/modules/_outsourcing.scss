@@ -1,0 +1,70 @@
+.outsourcing {
+  overflow: hidden;
+  &__top {
+    max-width: 130rem;
+  }
+  &__text {
+    max-width: 88rem;
+    @include line-height(26, 31);
+    margin-top: 2rem;
+    @include large-tablet {
+      @include line-height(20, 24);
+    }
+    @include large-mobile {
+      @include line-height(13, 16);
+    }
+  }
+  &__slider {
+    margin: 9rem -100% 0;
+    padding: 0 100%;
+    @include large-tablet {
+      margin: 5rem -2rem 0;
+      padding: 0 2rem;
+    }
+    @include large-mobile {
+      margin-top: 2rem;
+    }
+    .swiper-slide {
+      &:last-child {
+        .outsourcing__step {
+          padding-right: 0;
+        }
+      }
+    }
+  }
+  &__step {
+    position: relative;
+    padding-right: 11rem;
+    &::before {
+      content: '';
+      width: 100%;
+      height: 1px;
+      background-color: var(--color-blue);
+      position: absolute;
+      left: .3rem;
+      top: 9.9rem;
+      z-index: -1;
+      @include large-tablet {
+        top: 5.9rem;
+      }
+      @include large-mobile {
+        top: 4.3rem;
+      }
+    }
+    @include large-tablet {
+      padding-right: 5rem;
+    }
+    @include large-mobile {
+      padding-right: 3rem;
+    }
+  }
+  &__info {
+    margin-top: 9rem;
+    @include large-tablet {
+      margin-top: 5rem;
+    }
+    @include large-mobile {
+      margin-top: 3rem;
+    }
+  }
+}

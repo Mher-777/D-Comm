@@ -1,2 +1,6 @@
 @import "../../node_modules/magnific-popup/src/css/main";
 @import "../../node_modules/swiper/swiper";
+
+.swiper-free-mode .swiper-slide{
+  width: fit-content;
+}
