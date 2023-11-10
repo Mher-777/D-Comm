@@ -54,6 +54,11 @@ body {
 	&.resize-animation-stopper * {
 		transition: none !important;
 	}
+
+	@include large-tablet {
+		@include line-height(16, 20);
+	}
+
 	@include large-mobile {
 		@include line-height(13, 17);
 	}
@@ -223,5 +228,19 @@ section {
 	}
 	@include large-mobile {
 		margin-top: 3rem;
+	}
+}
+
+.count {
+	white-space: nowrap;
+	font-size: 10rem;
+	display: block;
+	font-weight: 600;
+	line-height: 0.8em;
+	@include large-tablet {
+		font-size: 5rem;
+	}
+	@include large-mobile {
+		font-size: 3rem;
 	}
 }

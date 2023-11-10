@@ -1,0 +1,49 @@
+.company {
+  &__subtitle {
+    margin-top: 2rem;
+  }
+  &__title {
+    @include large-mobile {
+      br {
+        display: none;
+      }
+    }
+  }
+  &__inner {
+    margin-top: 5rem;
+    margin-left: -11rem;
+    margin-bottom: -5rem;
+    @include large-desktop {
+      margin-bottom: 2rem;
+      margin-left: -5rem;
+    }
+    @include large-mobile {
+      margin: 0;
+    }
+  }
+  &__cell {
+    width: 700 / 1650 * 100%;
+    display: flex;
+    margin-left: 11rem;
+    margin-bottom: 5rem;
+    @include large-desktop {
+      margin-left: 5rem;
+      margin-bottom: 3rem;
+    }
+    @include large-mobile {
+      margin: 2rem 0 0 0;
+      width: 100%;
+      display: block;
+    }
+  }
+  &__count {
+    color: var(--color-blue-light);
+    margin-right: 5rem;
+    @include large-tablet {
+      margin-right: 2rem;
+    }
+    @include large-mobile {
+      margin: 0 0 1rem 0;
+    }
+  }
+}

@@ -1,17 +1,6 @@
 .step {
   &__count {
-    white-space: nowrap;
-    font-size: 10rem;
-    display: block;
-    font-weight: 600;
-    line-height: 0.8em;
     margin-bottom: 1rem;
-    @include large-tablet {
-      font-size: 5rem;
-    }
-    @include large-mobile {
-      font-size: 3rem;
-    }
   }
   &__title {
     max-width: 33.8rem;

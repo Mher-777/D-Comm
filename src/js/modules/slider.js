@@ -25,6 +25,7 @@ var sliders = {
         new Swiper($(selector)[0], {
             modules: [FreeMode, Autoplay, Mousewheel],
             mousewheel: true,
+            preventInteractionOnTransition: true,
             freeMode: true,
             slidesPerView: "auto",
         })
