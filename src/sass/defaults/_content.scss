@@ -76,7 +76,7 @@ li, ol {
 		@include line-height(20, 25);
 	}
 	@include large-mobile {
-		@include line-height(16, 20);
+		@include line-height(13, 16);
 	}
 }
 

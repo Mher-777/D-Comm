@@ -5,14 +5,7 @@
   }
   &__text {
     max-width: 88rem;
-    @include line-height(26, 31);
     margin-top: 2rem;
-    @include large-tablet {
-      @include line-height(20, 24);
-    }
-    @include large-mobile {
-      @include line-height(13, 16);
-    }
   }
   &__slider {
     margin: 9rem -100% 0;

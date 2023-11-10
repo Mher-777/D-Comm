@@ -1,0 +1,20 @@
+.textarea {
+  &__field {
+    height: 15.5rem;
+    border: none;
+    background-color: var(--color-white);
+    padding: 1.8rem 2rem;
+    font-size: 1.6rem;
+    display: block;
+    width: 100%;
+    resize: none;
+    color: var(--color-black);
+    @include large-mobile {
+      padding: 1.2rem 2rem;
+      font-size: 1.3rem;
+    }
+    @include placeholder {
+      color: var(--color-gray);
+    }
+  }
+}

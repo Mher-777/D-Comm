@@ -69,15 +69,18 @@
     position: relative;
     flex: 1 1 auto;
     max-width: 39rem;
+    @include line-height(26, 31);
     @include large-desktop {
       max-width: 33rem;
     }
     @include large-tablet {
       padding-left: 3rem;
       max-width: 23rem;
+      @include line-height(20, 25);
     }
     @include large-mobile {
       max-width: 100%;
+      @include line-height(16, 20);
       br {
         display: none;
       }

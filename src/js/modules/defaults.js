@@ -5,7 +5,7 @@ var defaults = {
 		config.body.css('paddingTop', config.header.outerHeight());
 
 		let resizeTimer;
-		window.addEventListener("resize", () => {
+		config.addListenerMulti(window, 'resize load', function () {
 			document.body.classList.add("resize-animation-stopper");
 			const headerHeight = config.header.outerHeight();
 
@@ -14,7 +14,7 @@ var defaults = {
 				document.body.classList.remove("resize-animation-stopper");
 				config.body.css('paddingTop', headerHeight)
 			}, 200);
-		});
+		})
 	},
 
 	init: () => {

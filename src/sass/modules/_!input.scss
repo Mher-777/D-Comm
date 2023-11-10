@@ -1,0 +1,28 @@
+.input {
+  &__field {
+    height: 5.5rem;
+    border: none;
+    background-color: var(--color-white);
+    padding: 1.8rem 2rem;
+    font-size: 1.6rem;
+    display: block;
+    width: 100%;
+    color: var(--color-black);
+    @include placeholder {
+      color: #B3B3B3;
+    }
+    @include large-mobile {
+      height: 4rem;
+      padding: 1.2rem 2rem;
+      font-size: 1.3rem;
+    }
+  }
+  &__parent {
+    & ~ .error {
+      font-size: 1.2rem;
+      display: block;
+      color: #ff0f0f;
+      font-weight: 500;
+    }
+  }
+}

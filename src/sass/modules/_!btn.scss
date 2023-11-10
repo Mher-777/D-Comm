@@ -32,11 +32,49 @@
     z-index: 4;
   }
 
+  &_medium {
+    min-height: 6rem;
+    font-size: 1.8rem;
+    min-width: 32rem;
+  }
+
+  &_light-blue {
+    background-color: var(--color-blue-light);
+    .b-circle {
+      background-color: var(--color-white);
+      border-color: var(--color-white);
+    }
+    @include min-large-mobile {
+      &:hover {
+        color: var(--color-blue-light);
+      }
+    }
+  }
+
   @include large-mobile {
     font-size: 1.4rem;
     min-width: 17rem;
     min-height: 4rem;
     padding: 1.4rem 2rem;
     display: flex;
+    &_small {
+      min-height: 4.5rem;
+    }
+  }
+}
+
+.btn-white {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40.5rem;
+  padding: 1.4rem 3rem;
+  color: var(--color-blue-light);
+  background-color: var(--color-white);
+  font-weight: 500;
+  @include large-mobile {
+    min-width: 23rem;
+    padding: .7rem 1rem;
+    font-size: 1.2rem;
   }
 }

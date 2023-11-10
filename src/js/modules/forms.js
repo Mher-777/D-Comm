@@ -4,6 +4,7 @@ import validate from "jquery-validation";
 var forms = {
 	mask: () => {
 		var selector = document.querySelectorAll("input[name='phone']");
+		var email = document.querySelectorAll("input[name='email']");
 
 		var im = new Inputmask({
 			mask: "+7 (999) 999-99-99",
@@ -11,7 +12,23 @@ var forms = {
 			clearIncomplete: false,
 		});
 
+		var emailMask = new Inputmask({
+			mask: "*{1,20}[.*{1,20}][.*{1,20}][.*{1,20}]@*{1,20}[.*{2,6}][.*{1,2}]",
+			greedy: false,
+			onBeforePaste: function (pastedValue, opts) {
+				pastedValue = pastedValue.toLowerCase();
+				return pastedValue.replace("mailto:", "");
+			},
+			definitions: {
+				'*': {
+					validator: "[0-9A-Za-z!#$%&'*+/=?^_`{|}~\-]",
+					casing: "lower"
+				}
+			}
+		});
+
 		im.mask(selector);
+		emailMask.mask(email);
 	},
 
 	validate: () => {

@@ -1,0 +1,16 @@
+section.feedback
+    .container
+        .feedback__inner.flex.flex_justify
+            .feedback__content
+                h2.feedback__title.h2 Закажите тест-драйв!
+                h3.feedback__subtitle.h3 Мы умеем работать <br> с небольшими заказам
+                .btn-white Перезвоним в течение 15 минут!
+                .feedback__subject Отправляя заявку, вы соглашаетесь на <a href="#">обработку персональных данных</a>
+            .feedback__form
+                form(action="/")
+                    .feedback__fields.flex
+                        +input(false, 'Имя', 'name').feedback__field
+                        +input(false, 'Телефон', 'phone').feedback__field
+                        +input(false, 'Почта', 'email').feedback__field.feedback__field_fluid
+                        +textarea(false, 'Комментарий', 'text').feedback__field.feedback__field_fluid
+                    +btn()(type="submit")._medium._light-blue.feedback__btn Получить консультацию
