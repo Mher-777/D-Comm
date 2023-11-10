@@ -1,1 +1,52 @@
-+b.FOOTER.footer
+block vars
+    - var socialsClass = 'footer__socials'
+footer.footer
+    .container
+        .footer__inner.flex.flex_justify
+            .footer__col.footer__col_medium
+               h4.footer__title.js-accordion Информация о компании
+               .footer__content
+                   p.footer__text Наша команда – это профессиональные PR-специалисты ИБ- и ИТ-компаний, государственных регуляторов, журналисты-профильники ведущих федеральных и региональных СМИ, а также наши незаменимые помощники – корректоры, ассистенты и расшифровщики.
+                   ul.footer__list
+                       li.footer__item ООО «Цифровые коммуникации»
+                       li.footer__item ОКПО 54238117
+                       li.footer__item ОГРН1237700420385
+                       li.footer__item ИНН/КПП 9726047453/772601001
+               a(href="#").footer__link.footer__link_tiny.mobile-hidden Политика конфиденциальности
+               a(href="#").footer__link.footer__link_tiny.mobile-hidden Пользовательское соглашение
+            .footer__col
+                h4.footer__title.is-active.js-accordion Контакты
+                .footer__content
+                    address.footer__address
+                        a(href="tel:+78000000000").footer__link
+                            +icon('phone')
+                            | +7 (495) 000-00-00
+                        a(href="tel:+78000000000").footer__link
+                            +icon('phone')
+                            | +7 (495) 000-00-00
+                        a(href="mailto:info@d-comm.ru").footer__link
+                            +icon('message')
+                            | info@d-comm.ru
+                        span.footer__link
+                            +icon('time')
+                            | Пн-Пт: с 09:00 до 18:00
+                        a(href="mailto:info@d-comm.ru").footer__link
+                            +icon('map')
+                            | Москва, Варшавское ш., <br>
+                            | д. 141, пом. 447
+                    +socials().footer__socials.desktop-hidden
+            .footer__col.footer__col_tiny
+                h4.footer__title.is-active.js-accordion Меню сайта
+                .footer__content
+                    nav.footer__menu
+                        a(href="#").footer__link Главная
+                        a(href="#").footer__link Условия для ИТ- и ИБ-компаний
+                        a(href="#").footer__link Целевые параметры
+                        a(href="#").footer__link О нас
+                        a(href="#").footer__link Контакты
+            a(href="#").footer__link.footer__link_tiny.desktop-hidden Политика конфиденциальности
+            a(href="#").footer__link.footer__link_tiny.desktop-hidden Пользовательское соглашение
+        .footer__copyright.flex.flex_vertical
+            span © ООО «Цифровые коммуникации» 2023. Все права защищены.
+            +socials().footer__socials.mobile-hidden
+            span.footer__name Разработано в Россайт

@@ -1,13 +1,13 @@
 mixin btn(link = false)
     if (link)
         +b.A.js-btn.btn__(href=link)&attributes(attributes)
-            +e.back.js-circles
+            +e.SPAN.back.js-circles
             +e.SPAN.text
                 if block
                     block
     else
         +b.BUTTON.js-btn.btn__(type='button')&attributes(attributes)
-            +e.back.js-circles
+            +e.SPAN.back.js-circles
             +e.SPAN.text
                 if block
                     block

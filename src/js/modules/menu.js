@@ -28,6 +28,26 @@ var menu = {
         })
     },
 
+    accordion: () => {
+        if ($(window).width() > 580) return false
+
+        $('.js-accordion').on('click', function (e) {
+            clearTimeout(menu.resizeTimer);
+            menu.resizeTimer = setTimeout(() => {
+                if ($(window).width() <= 580) {
+                    const $this = $(this)
+                    if ($this.hasClass('is-active')) {
+                        $this.siblings().slideDown()
+                        $this.removeClass('is-active')
+                    } else {
+                        $this.siblings().slideUp()
+                        $this.addClass('is-active')
+                    }
+                }
+            }, 25);
+        })
+    },
+
     dropDown: () => {
         if ($(window).width() > 992) return false
         $('.js-dropdown').on('click', function (e) {
@@ -110,6 +130,7 @@ var menu = {
         config.addListenerMulti(window, 'resize load', function () {
             menu.dropDown()
             menu.menuOpen()
+            menu.accordion()
         })
 
     }

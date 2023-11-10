@@ -3,13 +3,16 @@
   align-items: center;
   flex-wrap: wrap;
   @include large-tablet {
-    &::before {
-      content: attr(data-mobile-text);
-      display: block;
-      width: 100%;
-      font-size: 1.3rem;
-      margin-bottom: .8rem;
+    &[data-mobile-text] {
+      &::before {
+        content: attr(data-mobile-text);
+        display: block;
+        width: 100%;
+        font-size: 1.3rem;
+        margin-bottom: .8rem;
+      }
     }
+
   }
   &__item {
     width: 3rem;
@@ -49,12 +52,12 @@
         background-color: #4680C2;
       }
     }
-    &_wh {
+    &_whatsapp {
       &:hover {
         background-color: #25D366;
       }
     }
-    &_te {
+    &_telegram {
       &:hover {
         background-color: #0088CC;
       }

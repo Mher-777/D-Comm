@@ -1,0 +1,10 @@
+mixin socials
+    -
+        var list = [
+            "vk", "whatsapp", "telegram"
+        ]
+    .socials&attributes(attributes)
+        each social in list
+            .socials__item
+                a(href="#" target="_blank" class=`socials__link socials__link_${social}`)
+                    +icon(social)

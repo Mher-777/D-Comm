@@ -8,6 +8,7 @@
     display: block;
     width: 100%;
     color: var(--color-black);
+    border-radius: 0;
     @include placeholder {
       color: #B3B3B3;
     }

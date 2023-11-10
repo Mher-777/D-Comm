@@ -23,6 +23,11 @@ html {
 	font-size: 100vw / (1920/10); // 1rem = 10px
 	&.js-lock {
 		overflow: hidden;
+		position: relative;
+		body {
+			overflow: hidden;
+			position: relative;
+		}
 	}
 
 	@include mackbook {
@@ -228,6 +233,18 @@ section {
 	}
 	@include large-mobile {
 		margin-top: 3rem;
+	}
+}
+
+.mobile-hidden {
+	@include large-mobile {
+		display: none !important;
+	}
+}
+
+.desktop-hidden {
+	@include min-large-mobile {
+		display: none !important;
 	}
 }
 

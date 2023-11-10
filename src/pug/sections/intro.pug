@@ -3,9 +3,10 @@ section.intro
         //.intro__image
         //    img(src="/img/bg.jpeg" alt="bg").object-fit
         .intro__video
-            video(src="video-bg.mp4" type="video/mp4" preload="auto" no-controls autoplay loop playsinline muted).absolute
+            video(preload="auto" autoplay loop playsinline muted).absolute
+                source(type="video/mp4" src="video-bg.mp4" no-controls)
     .container
         .intro__inner
             .intro__content.css-text-center
-                h1.intro__title.h1 Профессиональный коммуникационный аутсорсинг
-                h3.intro__subtitle для ИТ- и ИБ-компаний
+                h1.intro__title.h1(data-aos="zoom-in") Профессиональный коммуникационный аутсорсинг
+                h3.intro__subtitle(data-aos="fade-right" data-aos-delay="300") для ИТ- и ИБ-компаний

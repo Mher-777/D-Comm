@@ -9,6 +9,7 @@
     width: 100%;
     resize: none;
     color: var(--color-black);
+    border-radius: 0;
     @include large-mobile {
       padding: 1.2rem 2rem;
       font-size: 1.3rem;

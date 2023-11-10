@@ -10,11 +10,13 @@ var forms = {
 			mask: "+7 (999) 999-99-99",
 			clearMaskOnLostFocus: true,
 			clearIncomplete: false,
+			inputmode: 'tel'
 		});
 
 		var emailMask = new Inputmask({
 			mask: "*{1,20}[.*{1,20}][.*{1,20}][.*{1,20}]@*{1,20}[.*{2,6}][.*{1,2}]",
 			greedy: false,
+			inputmode: 'email',
 			onBeforePaste: function (pastedValue, opts) {
 				pastedValue = pastedValue.toLowerCase();
 				return pastedValue.replace("mailto:", "");

@@ -1,0 +1,176 @@
+.footer {
+  margin-top: 10rem;
+  @include large-mobile {
+    margin-top: 4.5rem;
+  }
+  &__inner {
+    margin-left: -12rem;
+    @include large-tablet {
+      margin-left: -2rem;
+    }
+    @include large-mobile {
+      margin-left: 0;
+    }
+  }
+  &__col {
+    flex: 1 1 auto;
+    max-width: 29.5rem;
+    margin-left: 12rem;
+    &_medium {
+      max-width: 63.5rem;
+      @include large-tablet {
+        max-width: 40rem;
+      }
+    }
+    &_tiny {
+      max-width: 23rem;
+    }
+    @include large-tablet {
+      margin-left: 2rem;
+    }
+    @include large-mobile {
+      margin-left: 0;
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+  &__title {
+    color: var(--color-gray);
+    font-weight: 400;
+    font-size: 1.8rem;
+    margin-bottom: 4rem;
+    & + * {
+      @include min-large-mobile {
+        display: block !important;
+      }
+    }
+    @include large-tablet {
+      margin-bottom: 3rem;
+    }
+    @include large-mobile {
+      font-size: 1.3rem;
+      text-transform: uppercase;
+      color: var(--color-black);
+      margin-bottom: 2rem;
+      font-weight: 500;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      &::after {
+        content: '+';
+        font-size: 2rem;
+        font-weight: 500;
+        color: var(--color-governor-bay);
+      }
+      & ~ * {
+        display: block;
+      }
+      &.is-active {
+        &::after {
+          content: '-';
+        }
+        & ~ * {
+          display: none;
+        }
+      }
+    }
+  }
+  &__address {
+    font-style: normal;
+  }
+  &__list {
+    margin-bottom: 3rem;
+    font-size: 1.4rem;
+    @include large-mobile {
+      margin-top: 1rem;
+      font-size: 1.3rem;
+    }
+  }
+  &__text {
+    margin-bottom: 4.5rem;
+    @include large-tablet {
+      margin-bottom: 3rem;
+    }
+    @include large-mobile {
+      margin-bottom: 1rem;
+    }
+  }
+  &__item {
+
+  }
+  &__link {
+    color:  var(--color-black);
+    transition: all linear .2s;
+    margin-bottom: 3.5rem;
+    display: flex;
+    font-weight: 500;
+    &:hover {
+      color: var(--color-governor-bay);
+    }
+    .icon {
+      fill: var(--color-blue-light);
+      width: 2.4rem;
+      height: 2.4rem;
+      flex-shrink: 0;
+      margin-right: 1.2rem;
+      @include large-mobile {
+        width: 1.4rem;
+        height: 1.4rem;
+        margin-right: .5rem;
+      }
+    }
+    @include large-tablet {
+      margin-bottom: 2rem;
+    }
+    @include large-mobile {
+      br {
+        display: none;
+      }
+    }
+    &_tiny {
+      font-size: 1.4rem;
+      text-decoration-line: underline;
+      color: var(--color-gray);
+      margin: 0;
+      display: inline-block;
+      font-weight: 400;
+      &:not(:last-child) {
+        margin-right: 3rem;
+      }
+      @include large-mobile {
+        &:not(:last-child) {
+          margin: 0 0 1.5rem;
+        }
+      }
+    }
+  }
+  &__copyright {
+    font-size: 1.4rem;
+    border-top: 1px solid #D1D1D1;
+    padding: 3rem 0;
+    margin-top: 7rem;
+    span {
+      max-width: 85rem;
+    }
+    @include large-mobile {
+      padding: 2rem 2rem;
+      margin: 3rem -2rem 0;
+      border-color: var(--color-blue-light);
+    }
+  }
+  &__name {
+    @include large-mobile {
+      display: block;
+      margin-top: 1rem;
+      font-size: 1.2rem;
+      opacity: 0.5;
+    }
+  }
+  &__socials {
+    margin-left: auto;
+    margin-right: 3rem;
+    @include large-mobile {
+      margin-bottom: 2rem;
+    }
+  }
+}
