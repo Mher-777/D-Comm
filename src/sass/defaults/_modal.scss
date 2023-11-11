@@ -58,6 +58,12 @@
     top: 2.5rem;
     right: 2.5rem;
     position: absolute;
+    @include large-mobile {
+      width: 1.5rem;
+      height: 1.5rem;
+      top: 1rem;
+      right: 1rem;
+    }
   }
   .feedback {
     &__inner {

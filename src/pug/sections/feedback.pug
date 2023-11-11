@@ -1,16 +1,16 @@
 section.feedback
     .container
-        .feedback__inner.flex.flex_justify
+        .feedback__inner.flex.flex_justify(data-aos="zoom-in")
             .feedback__content
-                h2.feedback__title.h2 Закажите тест-драйв!
-                h3.feedback__subtitle.h3 Мы умеем работать <br> с небольшими заказам
-                .btn-white Перезвоним в течение 15 минут!
+                h2.feedback__title.h2(data-aos="zoom-in-up" data-aos-delay="300") Закажите тест-драйв!
+                h3.feedback__subtitle.h3(data-aos="zoom-in-up" data-aos-delay="350") Мы умеем работать <br> с небольшими заказам
+                .btn-white(data-aos="zoom-in-up" data-aos-delay="400") Перезвоним в течение 15 минут!
                 .feedback__subject Отправляя заявку, вы соглашаетесь на <a href="#">обработку персональных данных</a>
             .feedback-form
                 form(action="/")
                     .feedback-form__fields.flex
-                        +input(false, 'Имя', 'name').feedback-form__field
-                        +input(false, 'Телефон', 'phone').feedback-form__field
-                        +input(false, 'Почта', 'email').feedback-form__field.feedback-form__field_fluid
-                        +textarea(false, 'Комментарий', 'text').feedback-form__field.feedback-form__field_fluid
-                    +btn()(type="submit")._medium._light-blue.feedback-form__btn Получить консультацию
+                        +input(false, 'Имя', 'name').feedback-form__field(data-aos="zoom-in-up" data-aos-delay="400")
+                        +input(false, 'Телефон', 'phone').feedback-form__field(data-aos="zoom-in-up" data-aos-delay="450")
+                        +input(false, 'Почта', 'email').feedback-form__field.feedback-form__field_fluid(data-aos="zoom-in-up" data-aos-delay="500")
+                        +textarea(false, 'Комментарий', 'text').feedback-form__field.feedback-form__field_fluid(data-aos="zoom-in-up" data-aos-delay="550")
+                    +btn()(type="submit")._medium._light-blue.feedback-form__btn(data-aos="zoom-in-up" data-aos-delay="600") Получить консультацию

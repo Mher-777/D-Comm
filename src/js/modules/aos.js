@@ -3,7 +3,8 @@ import AOS from 'aos';
 var animation = {
     settings: {
         easing: 'ease-in-sine',
-        duration: '500'
+        duration: '500',
+        once: true
     },
 
     build: (selector) => {

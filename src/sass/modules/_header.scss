@@ -13,7 +13,7 @@
     border-bottom: 1px solid var(--color-blue);
     .header {
       &__inner {
-        padding: 1.5rem 0;
+        padding: 1.5rem 2rem;
       }
     }
     .menu__dropdown {
@@ -27,8 +27,13 @@
   &__inner {
     padding: 2.7rem 0;
     transition: var(--transition);
+    @include large-tablet {
+      margin: 0 -2rem;
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
     @include large-mobile {
-      padding: 1rem 0;
+      padding: 1rem 2rem;
     }
   }
   &__btn {
