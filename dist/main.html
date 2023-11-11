@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+    <title>Главная страница</title>
+    <link rel="stylesheet" href="./app/css/app.css?v=1699715051127">
+    <script>
+        function canUseWebP(){var e=document.createElement("canvas");return!(!e.getContext||!e.getContext("2d"))&&0==e.toDataURL("image/webp").indexOf("data:image/webp")}var root=document.getElementsByTagName("html")[0];canUseWebP()?root.classList.add("ws"):root.classList.add("wn");
+    </script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner flex flex_vertical flex_justify" data-aos="fade-in">
+                <div class="header__logo logo">
+                    <a class="logo__link" href="#">
+                        <img class="logo__image" src="app/img/logo.svg" alt="logo">
+                    </a>
+                </div>
+                <nav class="header__nav flex flex_vertical flex_justify">
+                    <nav class="header__menu menu">
+                        <ul class="menu__list flex">
+                            <li class="menu__item"><a class="menu__link" href="#">Главная</a>
+                            </li>
+                            <li class="menu__item js-dropdown"><a class="menu__link" href="#">Условия для&nbsp;ИТ- и&nbsp;ИБ-компаний<svg class="icon icon-arrow" viewBox="0 0 15 14"><use xlink:href="./app/icons/sprite.svg#arrow"></use></svg></a>
+                                <ul class="menu__dropdown dropdown">
+                                    <li class="dropdown__item"><a class="dropdown__link" href="#">Пакетные предложения<svg class="icon icon-arrow" viewBox="0 0 15 14"><use xlink:href="./app/icons/sprite.svg#arrow"></use></svg></a>
+                                    </li>
+                                    <li class="dropdown__item"><a class="dropdown__link" href="#">Дополнительные услуги<svg class="icon icon-arrow" viewBox="0 0 15 14"><use xlink:href="./app/icons/sprite.svg#arrow"></use></svg></a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="menu__item js-dropdown"><a class="menu__link" href="#">Целевые параметры<svg class="icon icon-arrow" viewBox="0 0 15 14"><use xlink:href="./app/icons/sprite.svg#arrow"></use></svg></a>
+                                <ul class="menu__dropdown dropdown">
+                                    <li class="dropdown__item"><a class="dropdown__link" href="#">Пакетные предложения<svg class="icon icon-arrow" viewBox="0 0 15 14"><use xlink:href="./app/icons/sprite.svg#arrow"></use></svg></a>
+                                    </li>
+                                    <li class="dropdown__item"><a class="dropdown__link" href="#">Дополнительные услуги<svg class="icon icon-arrow" viewBox="0 0 15 14"><use xlink:href="./app/icons/sprite.svg#arrow"></use></svg></a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="menu__item"><a class="menu__link" href="#">О нас</a>
+                            </li>
+                            <li class="menu__item"><a class="menu__link" href="#">Контакты</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="socials header__socials" data-mobile-text="Мы в&nbsp;социальных сетях:">
+                        <div class="socials__item">
+                            <a class="socials__link socials__link_vk" href="#" target="_blank">
+                                <svg class="icon icon-vk" viewBox="0 0 15 8">
+                                    <use xlink:href="./app/icons/sprite.svg#vk"></use>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="socials__item">
+                            <a class="socials__link socials__link_whatsapp" href="#" target="_blank">
+                                <svg class="icon icon-whatsapp" viewBox="0 0 17 16">
+                                    <use xlink:href="./app/icons/sprite.svg#whatsapp"></use>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="socials__item">
+                            <a class="socials__link socials__link_telegram" href="#" target="_blank">
+                                <svg class="icon icon-telegram" viewBox="0 0 14 12">
+                                    <use xlink:href="./app/icons/sprite.svg#telegram"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div><a class="js-btn btn header__btn js-modal" href="#feedback"><span class="btn__back js-circles"></span><span class="btn__text">Получить консультацию</span></a>
+                </nav>
+                <button class="hamburger js-hamburger">
+                    <svg class="icon icon-hamburgerOpen" viewBox="0 0 15 15">
+                        <use xlink:href="./app/icons/sprite.svg#hamburgerOpen"></use>
+                    </svg>
+                    <svg class="icon icon-hamburgerClose" viewBox="0 0 20 15">
+                        <use xlink:href="./app/icons/sprite.svg#hamburgerClose"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+    <section class="intro">
+        <div class="intro__bg">
+            <!--.intro__image-->
+            <!--    img(src="/img/bg.jpeg" alt="bg").object-fit-->
+            <div class="intro__video">
+                <video class="absolute" preload="auto" autoplay loop playsinline muted>
+                    <source type="video/mp4" src="video-bg.mp4" no-controls>
+                </video>
+            </div>
+        </div>
+        <div class="container">
+            <div class="intro__inner">
+                <div class="intro__content css-text-center">
+                    <h1 class="intro__title h1" data-aos="zoom-in">Профессиональный коммуникационный аутсорсинг</h1>
+                    <h3 class="intro__subtitle" data-aos="fade-right" data-aos-delay="300">для&nbsp;ИТ- и&nbsp;ИБ-компаний</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="subscription">
+        <div class="container">
+            <div class="subscription__subtitle section-title" data-aos="fade-right">Коммуникационный аутсорсинг по&nbsp;подписке</div>
+            <div class="subscription__inner flex flex_justify flex_start">
+                <div class="subscription__cell subscription__cell_left">
+                    <h2 class="subscription__title h2" data-aos="zoom-in">Мы предлагаем медийное продвижение компаниям среднего бизнеса в&nbsp;сфере:</h2>
+                    <ul class="subscription__items">
+                        <li class="subscription__item h3" data-aos="zoom-in" data-aos-delay="300">информационной безопасности</li>
+                        <li class="subscription__item h3" data-aos="zoom-in" data-aos-delay="400">информационных технологий</li>
+                        <li class="subscription__item h3" data-aos="zoom-in" data-aos-delay="500">а&nbsp;также
+                            <br>CIO и&nbsp;CISO</li>
+                    </ul>
+                </div>
+                <div class="subscription__cell subscription__cell_right">
+                    <div class="subscription__info">
+                        <svg class="icon icon-decor" viewBox="0 0 24 28">
+                            <use xlink:href="./app/icons/sprite.svg#decor"></use>
+                        </svg>
+                        <h4 class="subscription__subtitle h4">Ничего лишнего: <br> только результат</h4>
+                    </div>
+                    <div class="subscription__info">
+                        <svg class="icon icon-decor" viewBox="0 0 24 28">
+                            <use xlink:href="./app/icons/sprite.svg#decor"></use>
+                        </svg>
+                        <h4 class="subscription__subtitle h4">Прозрачно, как своя пресс-служба, эффективно, как агентство</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="outsourcing">
+        <div class="container">
+            <div class="outsourcing__top">
+                <h2 class="outsourcing__title h2" data-aos="fade-right"><span>Коммуникационный аутсорсинг</span> — промежуточный этап между выполнением PR-задач специалистами других направлений и&nbsp;небольшим отделом по&nbsp;связям с&nbsp;общественностью общей квалификации</h2>
+                <p class="outsourcing__text h3" data-aos="fade-right" data-aos-delay="300">Коммуникационный аутсорсинг позволяет получить быстрый результат без&nbsp;«болезней роста» штатной пресс-службы:</p>
+            </div>
+            <div class="swiper outsourcing__slider js-slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="outsourcing__step step step_1" data-aos="zoom-in" data-aos-delay="300"><span class="step__count count">01</span>
+                            <svg width="27" height="31" viewBox="0 0 27 31" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-decor">
+                                <path d="M12.8558 3.57628e-06L0 15.3209L13.4459 30.1265L26.3017 14.8056L12.8558 3.57628e-06Z" fill="#60BCB1" />
+                            </svg>
+                            <h4 class="step__title h4">Недозагруженность <br>PR-сотрудников профильными задачами</h4>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="outsourcing__step step step_2" data-aos="zoom-in" data-aos-delay="400"><span class="step__count count">02</span>
+                            <svg width="27" height="31" viewBox="0 0 27 31" xmlns="http://www.w3.org/2000/svg" class="icon-decor">
+                                <path d="M12.8558 3.57628e-06L0 15.3209L13.4459 30.1265L26.3017 14.8056L12.8558 3.57628e-06Z" fill="url(#paint0_linear_105_1470)" />
+                                <defs>
+                                    <linearGradient id="paint0_linear_105_1470" x1="-9" y1="14.9996" x2="27.8171" y2="9.98547" gradientUnits="userSpaceOnUse">
+                                        <stop offset="100%" stop-color="#60BCB1" />
+                                        <stop offset="1" stop-color="#69CCD7" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                            <h4 class="step__title h4">Перегруженность штатных пиарщиков вспомогательными функциями</h4>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="outsourcing__step step step_3" data-aos="zoom-in" data-aos-delay="500"><span class="step__count count">03</span>
+                            <svg width="27" height="31" viewBox="0 0 27 31" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-decor">
+                                <path d="M12.8558 3.57628e-06L0 15.3209L13.4459 30.1265L26.3017 14.8056L12.8558 3.57628e-06Z" fill="url(#paint0_linear_105_1475)" />
+                                <defs>
+                                    <linearGradient id="paint0_linear_105_1475" x1="-9" y1="14.9996" x2="38.1259" y2="8.58151" gradientUnits="userSpaceOnUse">
+                                        <stop offset="100%" stop-color="#69CCD7" />
+                                        <stop offset="1" stop-color="#5DA9D5" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                            <h4 class="step__title h4">Отсутствие ИТ- и&nbsp;ИБ-экспертизы и&nbsp;связей в&nbsp;СМИ</h4>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="outsourcing__step step step_4" data-aos="zoom-in" data-aos-delay="600"><span class="step__count count">04</span>
+                            <svg width="27" height="31" viewBox="0 0 27 31" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-decor">
+                                <path d="M12.8558 3.57628e-06L0 15.3209L13.4459 30.1265L26.3017 14.8056L12.8558 3.57628e-06Z" fill="url(#paint0_linear_105_1480)" />
+                                <defs>
+                                    <linearGradient id="paint0_linear_105_1480" x1="-2.5" y1="14.9996" x2="31.8627" y2="10.3197" gradientUnits="userSpaceOnUse">
+                                        <stop offset="100%" stop-color="#5DA9D5" />
+                                        <stop offset="1" stop-color="#597CD3" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                            <h4 class="step__title h4">Ротация – средний срок работы специалиста составляет 2,5 года*</h4>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="outsourcing__step step step_5"><span class="step__count count">05</span>
+                            <svg width="27" height="31" viewBox="0 0 27 31" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-decor">
+                                <path d="M12.8558 3.57628e-06L0 15.3209L13.4459 30.1265L26.3017 14.8056L12.8558 3.57628e-06Z" fill="url(#paint0_linear_105_1485)" />
+                                <defs>
+                                    <linearGradient id="paint0_linear_105_1485" x1="-6.5" y1="14.9996" x2="25.4082" y2="10.654" gradientUnits="userSpaceOnUse">
+                                        <stop offset="100%" stop-color="#597CD3" />
+                                        <stop offset="1" stop-color="#2F34A0" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                            <h4 class="step__title h4">Переплата за&nbsp;профильные задачи</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="info outsourcing__info" data-aos="zoom-in"><span class="info__subject">*Исследование было проведено по&nbsp;заказу портала SuperJob в&nbsp;сентябре 2020 года.</span>
+                <ul class="info__items">
+                    <li class="info__item"><span>Место проведения исследования:</span> Россия, все округа</li>
+                    <li class="info__item"><span>Исследуемая совокупность:</span> экономически активное
+                        <br>население России в&nbsp;возрасте 30-35 лет.</li>
+                    <li class="info__item info__item_width"><span>Размер выборки:</span> 25000 резюме – по&nbsp;500 резюме представителей 50 профессиональных групп, имеющих общий стаж работы по&nbsp;профессии не менее 6 лет и&nbsp;желающих работать по&nbsp;профессии в&nbsp;дальнейшем.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="company">
+        <div class="container">
+            <div class="company__subtitle section-title" data-aos="fade-right" data-aos-delay="300">Несколько слов о&nbsp;нашей компании</div>
+            <h2 class="company__title h2" data-aos="zoom-in">Наша команда — это профессиональные <br> PR-специалисты ИБ- и&nbsp;ИТ-компаний, государственных регуляторов, журналисты-профильники ведущих федеральных и&nbsp;региональных СМИ, а&nbsp;также наши незаменимые помощники  —  корректоры, ассистенты и&nbsp;расшифровщики</h2>
+            <div class="company__inner flex">
+                <div class="company__cell company__cell_left" data-aos="zoom-in-up" data-aos-delay="350"><span class="count company__count">30%</span>
+                    <p class="company__text">Клиентов (CIO и&nbsp;CISO) привлекают нас для&nbsp;поддержки и&nbsp;развития собственной капитализации в&nbsp;медийной среде</p>
+                </div>
+                <div class="company__cell company__cell_right" data-aos="zoom-in-up" data-aos-delay="400"><span class="count company__count">70%</span>
+                    <p class="company__text">Клиентов (средний бизнес) выбирают нас для&nbsp;полного аутсорсинга взаимодействия со&nbsp;СМИ</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="feedback">
+        <div class="container">
+            <div class="feedback__inner flex flex_justify" data-aos="zoom-in">
+                <div class="feedback__content">
+                    <h2 class="feedback__title h2" data-aos="zoom-in-up" data-aos-delay="300">Закажите тест-драйв!</h2>
+                    <h3 class="feedback__subtitle h3" data-aos="zoom-in-up" data-aos-delay="350">Мы умеем работать <br> с&nbsp;небольшими заказам</h3>
+                    <div class="btn-white" data-aos="zoom-in-up" data-aos-delay="400">Перезвоним в&nbsp;течение 15 минут!</div>
+                    <div class="feedback__subject">Отправляя заявку, вы соглашаетесь на&nbsp;<a href="#">обработку персональных данных</a>
+                    </div>
+                </div>
+                <div class="feedback-form">
+                    <form action="/">
+                        <div class="feedback-form__fields flex">
+                            <div class="input feedback-form__field" data-aos="zoom-in-up" data-aos-delay="400">
+                                <div class="input__parent">
+                                    <input class="input__field" name="name" placeholder="Имя" type="text" />
+                                </div>
+                            </div>
+                            <div class="input feedback-form__field" data-aos="zoom-in-up" data-aos-delay="450">
+                                <div class="input__parent">
+                                    <input class="input__field" name="phone" placeholder="Телефон" type="text" />
+                                </div>
+                            </div>
+                            <div class="input feedback-form__field feedback-form__field feedback-form__field_fluid" data-aos="zoom-in-up" data-aos-delay="500">
+                                <div class="input__parent">
+                                    <input class="input__field" name="email" placeholder="Почта" type="text" />
+                                </div>
+                            </div>
+                            <div class="textarea feedback-form__field feedback-form__field feedback-form__field_fluid" data-aos="zoom-in-up" data-aos-delay="550">
+                                <div class="textarea__parent">
+                                    <textarea class="textarea__field" name="text" placeholder="Комментарий"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="js-btn btn btn_medium btn_light-blue feedback-form__btn" type="submit" data-aos="zoom-in-up" data-aos-delay="600"><span class="btn__back js-circles"></span><span class="btn__text">Получить консультацию</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner flex flex_justify">
+                <div class="footer__col footer__col_medium">
+                    <h4 class="footer__title js-accordion">Информация о&nbsp;компании</h4>
+                    <div class="footer__content">
+                        <p class="footer__text">Наша команда – это профессиональные PR-специалисты ИБ- и&nbsp;ИТ-компаний, государственных регуляторов, журналисты-профильники ведущих федеральных и&nbsp;региональных СМИ, а&nbsp;также наши незаменимые помощники – корректоры, ассистенты
+                            и&nbsp;расшифровщики.</p>
+                        <ul class="footer__list">
+                            <li class="footer__item">ООО «Цифровые коммуникации»</li>
+                            <li class="footer__item">ОКПО 54238117</li>
+                            <li class="footer__item">ОГРН1237700420385</li>
+                            <li class="footer__item">ИНН/КПП 9726047453/772601001</li>
+                        </ul>
+                    </div><a class="footer__link footer__link_tiny mobile-hidden" href="#">Политика конфиденциальности</a><a class="footer__link footer__link_tiny mobile-hidden" href="#">Пользовательское соглашение</a>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__title is-active js-accordion">Контакты</h4>
+                    <div class="footer__content"><address class="footer__address"><a class="footer__link" href="tel:+78000000000"><svg class="icon icon-phone" viewBox="0 0 24 24"><use xlink:href="./app/icons/sprite.svg#phone"></use></svg>+7 (495) 000-00-00</a><a class="footer__link" href="tel:+78000000000"><svg class="icon icon-phone" viewBox="0 0 24 24"><use xlink:href="./app/icons/sprite.svg#phone"></use></svg>+7 (495) 000-00-00</a><a class="footer__link" href="mailto:info@d-comm.ru"><svg class="icon icon-message" viewBox="0 0 24 24"><use xlink:href="./app/icons/sprite.svg#message"></use></svg>info@d-comm.ru</a><span class="footer__link"><svg class="icon icon-time" viewBox="0 0 24 24"><use xlink:href="./app/icons/sprite.svg#time"></use></svg>Пн-Пт: с&nbsp;09:00 до&nbsp;18:00</span><a class="footer__link" href="mailto:info@d-comm.ru"><svg class="icon icon-map" viewBox="0 0 24 24"><use xlink:href="./app/icons/sprite.svg#map"></use></svg>Москва, Варшавское ш., <br>
+д. 141, пом. 447</a></address>
+                        <div class="socials footer__socials desktop-hidden">
+                            <div class="socials__item">
+                                <a class="socials__link socials__link_vk" href="#" target="_blank">
+                                    <svg class="icon icon-vk" viewBox="0 0 15 8">
+                                        <use xlink:href="./app/icons/sprite.svg#vk"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="socials__item">
+                                <a class="socials__link socials__link_whatsapp" href="#" target="_blank">
+                                    <svg class="icon icon-whatsapp" viewBox="0 0 17 16">
+                                        <use xlink:href="./app/icons/sprite.svg#whatsapp"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="socials__item">
+                                <a class="socials__link socials__link_telegram" href="#" target="_blank">
+                                    <svg class="icon icon-telegram" viewBox="0 0 14 12">
+                                        <use xlink:href="./app/icons/sprite.svg#telegram"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__col footer__col_tiny">
+                    <h4 class="footer__title is-active js-accordion">Меню сайта</h4>
+                    <div class="footer__content">
+                        <nav class="footer__menu"><a class="footer__link" href="#">Главная</a><a class="footer__link" href="#">Условия для&nbsp;ИТ- и&nbsp;ИБ-компаний</a><a class="footer__link" href="#">Целевые параметры</a><a class="footer__link" href="#">О нас</a><a class="footer__link"
+                            href="#">Контакты</a>
+                        </nav>
+                    </div>
+                </div><a class="footer__link footer__link_tiny desktop-hidden" href="#">Политика конфиденциальности</a><a class="footer__link footer__link_tiny desktop-hidden" href="#">Пользовательское соглашение</a>
+            </div>
+            <div class="footer__copyright flex flex_vertical"><span>© ООО «Цифровые коммуникации» 2023. Все права защищены.</span>
+                <div class="socials footer__socials mobile-hidden">
+                    <div class="socials__item">
+                        <a class="socials__link socials__link_vk" href="#" target="_blank">
+                            <svg class="icon icon-vk" viewBox="0 0 15 8">
+                                <use xlink:href="./app/icons/sprite.svg#vk"></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="socials__item">
+                        <a class="socials__link socials__link_whatsapp" href="#" target="_blank">
+                            <svg class="icon icon-whatsapp" viewBox="0 0 17 16">
+                                <use xlink:href="./app/icons/sprite.svg#whatsapp"></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="socials__item">
+                        <a class="socials__link socials__link_telegram" href="#" target="_blank">
+                            <svg class="icon icon-telegram" viewBox="0 0 14 12">
+                                <use xlink:href="./app/icons/sprite.svg#telegram"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div><span class="footer__name">Разработано в&nbsp;Россайт</span>
+            </div>
+        </div>
+    </footer>
+    <div class="modals modals-feedback feedback mfp-hide" id="feedback">
+        <div class="feedback__inner flex flex_justify">
+            <div class="feedback__content">
+                <div class="modals-feedback__title">Закажите тест-драйв!</div>
+                <div class="modals-feedback__subtitle">Мы умеем работать
+                    <br>с&nbsp;небольшими заказам</div>
+                <div class="btn-white">Перезвоним в&nbsp;течение 15 минут!</div>
+                <div class="modals-feedback__subject">Отправляя заявку, вы соглашаетесь на&nbsp;<a href="#">обработку персональных данных</a>
+                </div>
+            </div>
+            <div class="feedback-form">
+                <form action="/">
+                    <div class="feedback-form__fields flex">
+                        <div class="input feedback-form__field">
+                            <div class="input__parent">
+                                <input class="input__field" name="name" placeholder="Имя" type="text" />
+                            </div>
+                        </div>
+                        <div class="input feedback-form__field">
+                            <div class="input__parent">
+                                <input class="input__field" name="phone" placeholder="Телефон" type="text" />
+                            </div>
+                        </div>
+                        <div class="input feedback-form__field feedback-form__field feedback-form__field_fluid">
+                            <div class="input__parent">
+                                <input class="input__field" name="email" placeholder="Почта" type="text" />
+                            </div>
+                        </div>
+                        <div class="textarea feedback-form__field feedback-form__field feedback-form__field_fluid">
+                            <div class="textarea__parent">
+                                <textarea class="textarea__field" name="text" placeholder="Комментарий"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="js-btn btn btn_medium btn_light-blue feedback-form__btn" type="submit"><span class="btn__back js-circles"></span><span class="btn__text">Получить консультацию</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="./app/js/app.js?v=1699715051133"></script>
+</body>
+
+</html>
