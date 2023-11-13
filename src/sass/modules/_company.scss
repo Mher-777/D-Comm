@@ -1,6 +1,7 @@
 .company {
+  padding-top: 3rem;
   &__subtitle {
-    margin-top: 2rem;
+
   }
   &__title {
     @include large-mobile {
@@ -13,9 +14,9 @@
     font-weight: 500;
   }
   &__inner {
-    margin-top: 5rem;
+    margin-top: 6rem;
     margin-left: -11rem;
-    margin-bottom: -5rem;
+    margin-bottom: -4rem;
     @include large-desktop {
       margin-bottom: 2rem;
       margin-left: -5rem;

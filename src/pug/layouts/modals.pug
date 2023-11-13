@@ -1,15 +1,17 @@
+// https://jqueryvalidation.org/ плагин который используется при валидации
+// для аякс запроса советую сначала проверять $(form).valid() а потом уже код запроса
 +e.modals.modals-feedback.feedback.mfp-hide#feedback
     .feedback__inner.flex.flex_justify
         .feedback__content
             .modals-feedback__title Закажите тест-драйв!
             .modals-feedback__subtitle Мы умеем работать <br> с небольшими заказам
-            .btn-white Перезвоним в течение 15 минут!
+            .btn-white.btn-white_small Перезвоним в течение 15 минут!
             .modals-feedback__subject Отправляя заявку, вы соглашаетесь на <a href="#">обработку персональных данных</a>
         .feedback-form
-            form(action="/")
+            form(action="/").js-modal-close
                 .feedback-form__fields.flex
-                    +input(false, 'Имя', 'name').feedback-form__field
-                    +input(false, 'Телефон', 'phone').feedback-form__field
-                    +input(false, 'Почта', 'email').feedback-form__field.feedback-form__field_fluid
-                    +textarea(false, 'Комментарий', 'text').feedback-form__field.feedback-form__field_fluid
+                    +input(false, 'Имя', 'name')._small.feedback-form__field
+                    +input(false, 'Телефон', 'phone')._small.feedback-form__field
+                    +input(false, 'Почта', 'email')._small.feedback-form__field.feedback-form__field_fluid
+                    +textarea(false, 'Комментарий', 'text')._small.feedback-form__field.feedback-form__field_fluid
                 +btn()(type="submit")._medium._light-blue.feedback-form__btn Получить консультацию

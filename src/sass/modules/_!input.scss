@@ -1,4 +1,12 @@
 .input {
+  &_small {
+    .input__field {
+      font-size: 1.4rem;
+      @include placeholder {
+        font-size: 1.4rem;
+      }
+    }
+  }
   &__field {
     height: 5.5rem;
     border: none;
@@ -10,7 +18,8 @@
     color: var(--color-black);
     border-radius: 0;
     @include placeholder {
-      color: #B3B3B3;
+      color: var(--color-gray);
+      font-size: 1.6rem;
     }
     @include large-mobile {
       height: 4rem;

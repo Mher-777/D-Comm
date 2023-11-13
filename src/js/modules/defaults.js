@@ -15,6 +15,7 @@ var defaults = {
 				config.body.css('paddingTop', headerHeight)
 			}, 500);
 		})
+
 	},
 
 	init: () => {

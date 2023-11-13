@@ -1,4 +1,5 @@
 import Inputmask from "inputmask";
+import {modals} from "./modals";
 import validate from "jquery-validation";
 
 var forms = {
@@ -53,10 +54,22 @@ var forms = {
 						.removeClass(errorClass)
 						.addClass(validClass);
 				},
+				submitHandler: (form) => {
+					if (!$(form).valid()) return false;
+
+					if ($(form).hasClass('is-submit')) {
+						form.submit()
+					}
+
+					if ($(form).hasClass('js-modal-close')) {
+						setTimeout(() => {
+							$.magnificPopup.close();
+						}, 250)
+					}
+				},
 				rules: {
 					phone: {
 						required: true,
-						minlength: 10
 					},
 					name: {
 						required: true,

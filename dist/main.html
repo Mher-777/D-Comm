@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
     <title>Главная страница</title>
-    <link rel="stylesheet" href="./app/css/app.css?v=1699715051127">
+    <link rel="stylesheet" href="./app/css/app.css?v=1699875898766">
     <script>
         function canUseWebP(){var e=document.createElement("canvas");return!(!e.getContext||!e.getContext("2d"))&&0==e.toDataURL("image/webp").indexOf("data:image/webp")}var root=document.getElementsByTagName("html")[0];canUseWebP()?root.classList.add("ws"):root.classList.add("wn");
     </script>
@@ -83,14 +83,20 @@
             </div>
         </div>
     </header>
-    <section class="intro">
+    <div class="quadrangle-decor">
+        <img class="quadrangle-decor__image" src="./app/img/quadrangle.svg" alt="quadrangle">
+    </div>
+    <section class="intro" data-logo-text="D-comm">
         <div class="intro__bg">
             <!--.intro__image-->
             <!--    img(src="/img/bg.jpeg" alt="bg").object-fit-->
             <div class="intro__video">
-                <video class="absolute" preload="auto" autoplay loop playsinline muted>
-                    <source type="video/mp4" src="video-bg.mp4" no-controls>
+                <video class="absolute" preload="auto" loop autoplay="autoplay" no-controls muted playsinline="" id="vid">
+                    <source type="video/mp4" src="video-bg.mp4">
                 </video>
+                <script>
+                    document.getElementById('vid').play()
+                </script>
             </div>
         </div>
         <div class="container">
@@ -325,7 +331,7 @@
                     </div>
                 </div><a class="footer__link footer__link_tiny desktop-hidden" href="#">Политика конфиденциальности</a><a class="footer__link footer__link_tiny desktop-hidden" href="#">Пользовательское соглашение</a>
             </div>
-            <div class="footer__copyright flex flex_vertical"><span>© ООО «Цифровые коммуникации» 2023. Все права защищены.</span>
+            <div class="footer__copyright flex flex_vertical"><span class="footer__copyright-text">© ООО «Цифровые коммуникации» 2023. Все права защищены.</span>
                 <div class="socials footer__socials mobile-hidden">
                     <div class="socials__item">
                         <a class="socials__link socials__link_vk" href="#" target="_blank">
@@ -352,35 +358,37 @@
             </div>
         </div>
     </footer>
+    <!-- https://jqueryvalidation.org/ плагин который используется при&nbsp;валидации-->
+    <!-- для&nbsp;аякс запроса советую сначала проверять $(form).valid() а&nbsp;потом уже код запроса-->
     <div class="modals modals-feedback feedback mfp-hide" id="feedback">
         <div class="feedback__inner flex flex_justify">
             <div class="feedback__content">
                 <div class="modals-feedback__title">Закажите тест-драйв!</div>
                 <div class="modals-feedback__subtitle">Мы умеем работать
                     <br>с&nbsp;небольшими заказам</div>
-                <div class="btn-white">Перезвоним в&nbsp;течение 15 минут!</div>
+                <div class="btn-white btn-white_small">Перезвоним в&nbsp;течение 15 минут!</div>
                 <div class="modals-feedback__subject">Отправляя заявку, вы соглашаетесь на&nbsp;<a href="#">обработку персональных данных</a>
                 </div>
             </div>
             <div class="feedback-form">
-                <form action="/">
+                <form class="js-modal-close" action="/">
                     <div class="feedback-form__fields flex">
-                        <div class="input feedback-form__field">
+                        <div class="input input_small feedback-form__field">
                             <div class="input__parent">
                                 <input class="input__field" name="name" placeholder="Имя" type="text" />
                             </div>
                         </div>
-                        <div class="input feedback-form__field">
+                        <div class="input input_small feedback-form__field">
                             <div class="input__parent">
                                 <input class="input__field" name="phone" placeholder="Телефон" type="text" />
                             </div>
                         </div>
-                        <div class="input feedback-form__field feedback-form__field feedback-form__field_fluid">
+                        <div class="input input_small feedback-form__field feedback-form__field feedback-form__field_fluid">
                             <div class="input__parent">
                                 <input class="input__field" name="email" placeholder="Почта" type="text" />
                             </div>
                         </div>
-                        <div class="textarea feedback-form__field feedback-form__field feedback-form__field_fluid">
+                        <div class="textarea textarea_small feedback-form__field feedback-form__field feedback-form__field_fluid">
                             <div class="textarea__parent">
                                 <textarea class="textarea__field" name="text" placeholder="Комментарий"></textarea>
                             </div>
@@ -393,7 +401,7 @@
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="./app/js/app.js?v=1699715051133"></script>
+    <script src="./app/js/app.js?v=1699875898775"></script>
 </body>
 
 </html>

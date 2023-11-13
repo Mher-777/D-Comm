@@ -1,10 +1,12 @@
-section.intro
+section.intro(data-logo-text="D-comm")
     .intro__bg
         //.intro__image
         //    img(src="/img/bg.jpeg" alt="bg").object-fit
         .intro__video
-            video(preload="auto" autoplay loop playsinline muted).absolute
-                source(type="video/mp4" src="video-bg.mp4" no-controls)
+            video(preload="auto" loop autoplay="autoplay" no-controls muted playsinline="").absolute#vid
+                source(type="video/mp4" src="video-bg.mp4")
+            script.
+                document.getElementById('vid').play()
     .container
         .intro__inner
             .intro__content.css-text-center

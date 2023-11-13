@@ -18,6 +18,10 @@
     margin-left: 12rem;
     &_medium {
       max-width: 63.5rem;
+      margin-right: 14rem;
+      @include large-desktop {
+        margin-right: 0;
+      }
       @include large-tablet {
         max-width: 40rem;
       }
@@ -88,6 +92,7 @@
   }
   &__text {
     margin-bottom: 4.5rem;
+    font-weight: 500;
     @include large-tablet {
       margin-bottom: 3rem;
     }
@@ -149,7 +154,7 @@
     border-top: 1px solid #D1D1D1;
     padding: 3rem 0;
     margin-top: 7rem;
-    span {
+    &-text {
       max-width: 85rem;
     }
     @include large-mobile {

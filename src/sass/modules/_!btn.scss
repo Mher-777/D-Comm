@@ -73,6 +73,10 @@
   color: var(--color-blue-light);
   background-color: var(--color-white);
   font-weight: 500;
+  &_small {
+    min-width: 33.5rem;
+    font-size: 1.6rem;
+  }
   @include large-mobile {
     min-width: 23rem;
     padding: .7rem 1rem;

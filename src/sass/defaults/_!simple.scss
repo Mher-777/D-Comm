@@ -261,3 +261,32 @@ section {
 		font-size: 3rem;
 	}
 }
+
+.quadrangle-decor {
+	position: absolute;
+	bottom: 47rem;
+	z-index: 5;
+	right: 0;
+	overflow: hidden;
+	&__image {
+		width: 14.2rem;
+		margin-right: 3rem;
+		@include mackbook {
+			margin-right: 0;
+			transform: translateX(4rem);
+		}
+		@include large-desktop {
+			transform: translateX(5rem);
+		}
+	}
+	@include large-desktop {
+		bottom: 48.8rem;
+	}
+	@include large-tablet {
+		display: none;
+	}
+}
+
+video::-webkit-media-controls {
+	display: none;
+}
