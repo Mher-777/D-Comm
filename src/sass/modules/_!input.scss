@@ -25,6 +25,9 @@
       height: 4rem;
       padding: 1.2rem 2rem;
       font-size: 1.3rem;
+      @include placeholder {
+        font-size: 1.3rem;
+      }
     }
   }
   &__parent {
